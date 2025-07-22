@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/img_meditation.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Círculo de fondo suave -->
+    <path
+        android:fillColor="#F0E6FA"
+        android:pathData="M100,20 A80,80 0 1,1 100,180 A80,80 0 1,1 100,20" />
+
+    <!-- Luna creciente -->
+    <path
+        android:fillColor="#E6B8D4"
+        android:pathData="M70,60 Q50,100 70,140 Q90,100 70,60" />
+
+    <!-- Estrella 1 -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M120,50 L122,56 L128,56 L123,60 L125,66 L120,62 L115,66 L117,60 L112,56 L118,56 Z" />
+
+    <!-- Estrella 2 -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M140,80 L141,84 L145,84 L142,86 L143,90 L140,87 L137,90 L138,86 L135,84 L139,84 Z" />
+
+    <!-- Flor 1 -->
+    <path
+        android:fillColor="#DDA0DD"
+        android:pathData="M60,130 Q60,125 65,125 Q70,125 70,130 Q70,135 65,135 Q60,135 60,130"
+        android:strokeColor="#DDA0DD"
+        android:strokeWidth="1" />
+
+    <!-- Tallo flor 1 -->
+    <path
+        android:strokeColor="#B8C9E6"
+        android:strokeWidth="2"
+        android:pathData="M65,135 L65,145" />
+
+    <!-- Flor 2 -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M130,120 Q130,115 135,115 Q140,115 140,120 Q140,125 135,125 Q130,125 130,120"
+        android:strokeColor="#FFB6C1"
+        android:strokeWidth="1" />
+
+    <!-- Tallo flor 2 -->
+    <path
+        android:strokeColor="#B8C9E6"
+        android:strokeWidth="2"
+        android:pathData="M135,125 L135,135" />
+
+    <!-- Pequeños puntos decorativos -->
+    <!-- Punto 1 -->
+    <path
+        android:fillColor="#F0E68C"
+        android:pathData="M85,75 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0" />
+
+    <!-- Punto 2 -->
+    <path
+        android:fillColor="#F0E68C"
+        android:pathData="M115,100 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0" />
+
+    <!-- Punto 3 -->
+    <path
+        android:fillColor="#F0E68C"
+        android:pathData="M90,115 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0" />
+
+</vector>
