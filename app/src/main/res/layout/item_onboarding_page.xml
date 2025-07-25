@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <!-- Imagen/Emoji principal -->
+    <TextView
+        android:id="@+id/tvImagenOnboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌸"
+        android:textSize="80sp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/tvTituloOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenida a tu refugio digital"
+        android:textSize="28sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/playfair_display"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtituloOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Un espacio diseñado especialmente para ti"
+        android:textSize="18sp"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/quicksand_bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/tvDescripcionOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5 Minutos Conmigo es tu compañera en el viaje hacia el autoconocimiento y el amor propio."
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="@font/quicksand_regular"
+        android:textAlignment="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Layout para input de nombre (visible solo en la última página) -->
+    <LinearLayout
+        android:id="@+id/layoutInputOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esto nos ayudará a personalizar tu experiencia 💕"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_regular"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etNombreOnboarding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tu nombre o como te gusta que te llamen..."
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/quicksand_regular"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:inputType="textPersonName|textCapWords"
+            android:maxLength="25"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

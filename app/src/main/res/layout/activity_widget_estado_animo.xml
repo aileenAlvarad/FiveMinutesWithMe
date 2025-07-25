@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".WidgetEstadoAnimoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header con fecha y hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-in Emocional"
+                android:textSize="24sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/playfair_display"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvFechaHoraCheckin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Miércoles, 15 de Julio - 14:30"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_medium" />
+
+        </LinearLayout>
+
+        <!-- Pregunta personalizada -->
+        <TextView
+            android:id="@+id/tvPreguntaCheckin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo te encuentras en este momento?"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/quicksand_medium"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Selector de estado de ánimo -->
+        <RadioGroup
+            android:id="@+id/rgEstadoAnimoRapido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rbRadiante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨ Radiante y llena de energía"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:buttonTint="@color/emocion_feliz"
+                android:padding="12dp"
+                android:background="@drawable/radio_button_background"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rbTranquila"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌙 En calma y centrada"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:buttonTint="@color/emocion_tranquila"
+                android:padding="12dp"
+                android:background="@drawable/radio_button_background"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rbNeutral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="☁️ Neutral, ni bien ni mal"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:buttonTint="@color/emocion_neutral"
+                android:padding="12dp"
+                android:background="@drawable/radio_button_background"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rbSensible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌧️ Sensible y reflexiva"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:buttonTint="@color/emocion_triste"
+                android:padding="12dp"
+                android:background="@drawable/radio_button_background"
+                android:layout_marginBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/rbAbrumada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌊 Abrumada o ansiosa"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:buttonTint="@color/emocion_ansiosa"
+                android:padding="12dp"
+                android:background="@drawable/radio_button_background" />
+
+        </RadioGroup>
+
+        <!-- Notas rápidas opcionales -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Algo más que quieras agregar? (opcional)"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etNotasRapidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notas rápidas sobre cómo te sientes..."
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/quicksand_regular"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:minHeight="80dp"
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="3"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Sugerencia personalizada -->
+        <LinearLayout
+            android:id="@+id/layoutSugerencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/sugerencia_background"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvSugerencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sugerencia personalizada aparecerá aquí"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnAceptarSugerencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Me interesa 💕"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSaltarCheckin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Saltar por ahora"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="24dp" />
+
+            <Button
+                android:id="@+id/btnGuardarCheckin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guardar check-in"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_bold"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

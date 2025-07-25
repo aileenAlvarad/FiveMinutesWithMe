@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPrincipalWidget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="16dp">
+
+    <!-- Header del widget -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌸"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Minutos Conmigo"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFechaWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunes, 15 Jul"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:alpha="0.8" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Mensaje motivacional -->
+    <TextView
+        android:id="@+id/tvMensajeWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Qué tal una pausa para ti? 💫"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Estadísticas rápidas -->
+    <TextView
+        android:id="@+id/tvEstadisticasWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3 días consecutivos ✨"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:alpha="0.9"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Botones de acción rápida -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnMomentoWidget"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_play"
+            android:background="@drawable/widget_button_background"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="5 minutos para mí"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/btnCheckinWidget"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_heart_widget"
+            android:background="@drawable/widget_button_background"
+            android:layout_marginHorizontal="4dp"
+            android:contentDescription="Check-in emocional"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/btnDiarioWidget"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_diary"
+            android:background="@drawable/widget_button_background"
+            android:layout_marginStart="4dp"
+            android:contentDescription="Mi diario"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+</LinearLayout>

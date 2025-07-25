@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PerfilActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header personalizado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/gradient_header">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perfil_title"
+                android:textSize="28sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/playfair_display"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Hola, hermosa alma! 💕"
+                android:textSize="18sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_medium" />
+
+        </LinearLayout>
+
+        <!-- Sección de nombre personal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Cómo te gusta que te llamen?"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tu nombre o apodo favorito..."
+                android:textColorHint="@color/text_hint"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_regular"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="20" />
+
+        </LinearLayout>
+
+        <!-- Estadísticas personales -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Tu Progreso Personal"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvEstadisticas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando estadísticas..."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Altar Digital -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✨ Tu Altar Digital"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elementos que representan lo que amas"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_regular"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAltarDigital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+        <!-- Frases de Inspiración -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="💫 Frases que te Inspiran"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="@font/quicksand_bold" />
+
+                <Button
+                    android:id="@+id/btnAgregarFrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="+ Agregar"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/white"
+                    app:cornerRadius="18dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mantén presionado para editar o eliminar"
+                android:textSize="12sp"
+                android:textColor="@color/text_hint"
+                android:fontFamily="@font/quicksand_regular"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFrasesInspiracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+        <!-- Configuraciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Configuraciones"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Recordatorios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recordatorios diarios"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/quicksand_medium" />
+
+                    <TextView
+                        android:id="@+id/tvHoraRecordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20:00"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/quicksand_regular" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchRecordatorios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/primary" />
+
+            </LinearLayout>
+
+            <!-- Botones de configuración -->
+            <Button
+                android:id="@+id/btnCambiarTema"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎨 Cambiar Tema"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="12dp" />
+
+            <Button
+                android:id="@+id/btnExportarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📤 Exportar Mis Datos"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Espaciado inferior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

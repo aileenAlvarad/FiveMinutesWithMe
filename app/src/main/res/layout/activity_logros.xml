@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".LogrosActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/gradient_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏆 Tus Logros"
+            android:textSize="28sp"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/playfair_display"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celebrando tu dedicación al autocuidado"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_medium" />
+
+    </LinearLayout>
+
+    <!-- Estadísticas generales -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:layout_margin="16dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/tvEstadisticasGenerales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargando estadísticas..."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_regular"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+
+    <!-- Tabs para filtrar logros -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutLogros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabTextColor="@color/text_secondary"
+        app:tabIndicatorColor="@color/primary"
+        app:tabMode="fixed"
+        android:elevation="2dp" />
+
+    <!-- Contenido principal -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Lista de logros -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLogros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false" />
+
+        <!-- Mensaje cuando no hay logros -->
+        <TextView
+            android:id="@+id/tvNoLogros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay logros para mostrar"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_medium"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

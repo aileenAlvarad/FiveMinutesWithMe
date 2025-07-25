@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Colores principales -->
+    <!-- Colores principales de la app -->
     <color name="primary">#E6B8D4</color>
-    <color name="primary_variant">#D4A5C7</color>
-    <color name="secondary">#B8C9E6</color>
-    <color name="background">#FFF5F5</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="error">#F08080</color>
+    <color name="primary_variant">#DDA0DD</color>
+    <color name="secondary">#F0E68C</color>
+    <color name="accent">#FFB6C1</color>
 
-    <!-- Colores de texto -->
-    <color name="text_primary">#4A4A4A</color>
-    <color name="text_secondary">#8A8A8A</color>
+    <!-- Fondo y superficies -->
+    <color name="background">#FEFBFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F8F4F6</color>
+
+    <!-- Textos -->
+    <color name="text_primary">#2D2D2D</color>
+    <color name="text_secondary">#8B7A8B</color>
     <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_hint">#B8A8B8</color>
 
     <!-- Colores de emociones -->
     <color name="emocion_feliz">#FFB6C1</color>
@@ -19,11 +23,16 @@
     <color name="emocion_triste">#B0C4DE</color>
     <color name="emocion_ansiosa">#DDA0DD</color>
     <color name="emocion_agradecida">#F0E68C</color>
+    <color name="emocion_neutral">#F5F5DC</color>
 
-    <!-- Otros colores aesthetic -->
+    <!-- Estados -->
+    <color name="success">#C8E6C9</color>
+    <color name="warning">#FFE0B2</color>
+    <color name="error">#FFCDD2</color>
+
+    <!-- Utilidades -->
     <color name="white">#FFFFFF</color>
-    <color name="lavender">#E6E6FA</color>
-    <color name="peach">#FFDAB9</color>
-    <color name="mint">#F0FFF0</color>
-    <color name="sky_blue">#87CEEB</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="divider">#F0F0F0</color>
 </resources>

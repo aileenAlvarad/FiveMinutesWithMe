@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".OnboardingActivity">
+
+    <!-- ViewPager para las páginas de onboarding -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Indicadores de página -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutOnboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/tab_indicator_onboarding"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@android:color/transparent"
+        android:layout_marginVertical="16dp" />
+
+    <!-- Botones de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Anterior"
+            android:textAllCaps="false"
+            android:fontFamily="@font/quicksand_medium"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="12dp"
+            android:visibility="invisible"
+            app:cornerRadius="24dp" />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:fontFamily="@font/quicksand_bold"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            app:cornerRadius="24dp" />
+
+        <Button
+            android:id="@+id/btnComenzar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¡Comenzar mi viaje! 💕"
+            android:textAllCaps="false"
+            android:fontFamily="@font/quicksand_bold"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            android:visibility="gone"
+            app:cornerRadius="24dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

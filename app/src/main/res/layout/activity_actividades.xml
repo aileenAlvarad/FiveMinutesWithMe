@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ActividadesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/gradient_header">
+
+            <TextView
+                android:id="@+id/tvTituloActividad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respiración Consciente"
+                android:textSize="26sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/playfair_display"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvDescripcionActividad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Un momento para reconectar con tu respiración"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Timer y progress -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTiempo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05:00"
+                    android:textSize="24sp"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="16dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="1"
+                    android:progressTint="@color/primary"
+                    android:progressBackgroundTint="@color/surface"
+                    android:max="100" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Contenido principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Instrucciones -->
+            <TextView
+                android:id="@+id/tvInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sigue el ritmo del círculo: inhala cuando crezca, exhala cuando se contraiga."
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Área de actividades -->
+
+            <!-- Animación de respiración -->
+            <LinearLayout
+                android:id="@+id/layoutAnimacion"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:layout_marginBottom="32dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/viewRespiracion"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/circulo_respiracion"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- Texto de afirmaciones/visualizaciones -->
+            <TextView
+                android:id="@+id/tvAfirmacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Merezco amor y cuidado, especialmente el mío propio 💕"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_medium"
+                android:textAlignment="center"
+                android:lineSpacingExtra="6dp"
+                android:padding="24dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="32dp"
+                android:visibility="gone" />
+
+            <!-- Campo de journaling -->
+            <EditText
+                android:id="@+id/etJournaling"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="¿Qué tres cosas puedo agradecer ahora mismo?"
+                android:textColorHint="@color/text_secondary"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_regular"
+                android:background="@drawable/edit_text_background"
+                android:padding="20dp"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:layout_marginBottom="32dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Botones de control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Otra actividad"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"
+                app:cornerRadius="24dp" />
+
+            <Button
+                android:id="@+id/btnComenzar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Comenzar"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_bold"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_marginStart="12dp"
+                app:cornerRadius="24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

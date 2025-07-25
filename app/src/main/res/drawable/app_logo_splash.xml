@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Círculo de fondo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,10 A50,50 0 1,1 60,110 A50,50 0 1,1 60,10" />
+
+    <!-- Corazón central -->
+    <path
+        android:fillColor="#E6B8D4"
+        android:pathData="M60,75 C50,65 35,50 35,40 C35,30 42,25 50,25 C55,25 60,30 60,30 C60,30 65,25 70,25 C78,25 85,30 85,40 C85,50 70,65 60,75 Z" />
+
+    <!-- Flores decorativas -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M30,30 Q25,25 30,20 Q35,25 30,30 Q25,35 20,30 Q25,25 30,30" />
+
+    <path
+        android:fillColor="#DDA0DD"
+        android:pathData="M90,30 Q95,25 100,30 Q95,35 90,30 Q85,25 90,20 Q95,25 90,30" />
+
+    <path
+        android:fillColor="#F0E68C"
+        android:pathData="M30,90 Q25,85 30,80 Q35,85 30,90 Q25,95 20,90 Q25,85 30,90" />
+
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M90,90 Q95,85 100,90 Q95,95 90,90 Q85,85 90,80 Q95,85 90,90" />
+
+    <!-- Números estilizados "5" -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,45 L52,45 L52,48 L48,48 L48,52 L52,52 L52,55 L45,55 L45,52 L45,48 L45,45 Z" />
+
+    <!-- Puntos decorativos -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,45 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,55 m -2,0 a 2,2 0 1,1 4,0 a 2,2 0 1,1 -4,0" />
+
+</vector>

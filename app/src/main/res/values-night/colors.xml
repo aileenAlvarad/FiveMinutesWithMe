@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales para tema oscuro -->
+    <color name="primary_dark">#F8BBD9</color>
+    <color name="primary_variant_dark">#E1B8E3</color>
+    <color name="secondary_dark">#F4E6A1</color>
+    <color name="accent_dark">#FFCCD5</color>
+
+    <!-- Fondo y superficies oscuras -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="surface_variant_dark">#2D2D2D</color>
+
+    <!-- Textos para tema oscuro -->
+    <color name="text_primary_dark">#E1E1E1</color>
+    <color name="text_secondary_dark">#B0B0B0</color>
+    <color name="text_on_primary_dark">#1A1A1A</color>
+    <color name="text_hint_dark">#757575</color>
+
+    <!-- Colores de emociones para tema oscuro (más suaves) -->
+    <color name="emocion_feliz_dark">#FFCCD5</color>
+    <color name="emocion_tranquila_dark">#D6D6FA</color>
+    <color name="emocion_triste_dark">#9BB7D4</color>
+    <color name="emocion_ansiosa_dark">#D1B3D1</color>
+    <color name="emocion_agradecida_dark">#E6D885</color>
+    <color name="emocion_neutral_dark">#D3D3D3</color>
+
+    <!-- Estados para tema oscuro -->
+    <color name="success_dark">#81C784</color>
+    <color name="warning_dark">#FFB74D</color>
+    <color name="error_dark">#E57373</color>
+
+    <!-- Utilitarios -->
+    <color name="divider_dark">#333333</color>
+</resources>

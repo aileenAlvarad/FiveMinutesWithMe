@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ConfiguracionesAvanzadasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/gradient_header">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Configuraciones"
+                android:textSize="28sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/playfair_display"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personaliza tu experiencia"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_medium" />
+
+        </LinearLayout>
+
+        <!-- Configuraciones de apariencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎨 Apariencia"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Modo oscuro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo oscuro"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/quicksand_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tema oscuro para la noche 🌙"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="@font/quicksand_regular" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchModoOscuro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/primary" />
+
+            </LinearLayout>
+
+            <!-- Animaciones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Animaciones"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/quicksand_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transiciones suaves ✨"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="@font/quicksand_regular" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchAnimaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/primary" />
+
+            </LinearLayout>
+
+            <!-- Sonidos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sonidos de la app"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/quicksand_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Efectos suaves 🔊"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="@font/quicksand_regular" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchSonidos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/primary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Datos y backup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💾 Respaldo de datos"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvUltimoBackup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin backups creados"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_regular"
+                android:layout_marginBottom="16dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBarBackup"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:indeterminate="true"
+                android:progressTint="@color/primary"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCrearBackup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📦 Crear backup completo"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="12dp" />
+
+            <Button
+                android:id="@+id/btnRestaurarBackup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📥 Restaurar desde backup"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="12dp" />
+
+            <Button
+                android:id="@+id/btnExportarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📤 Exportar datos específicos"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Privacidad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔒 Privacidad"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Analytics anónimos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Analytics anónimos"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/quicksand_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ayudar a mejorar la app (sin datos personales)"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="@font/quicksand_regular" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchAnalytics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/primary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Zona peligrosa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Zona de riesgo"
+                android:textSize="18sp"
+                android:textColor="@color/error"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnRestablecerApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔄 Restablecer aplicación"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/error"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esto eliminará TODOS tus datos permanentemente"
+                android:textSize="12sp"
+                android:textColor="@color/error"
+                android:fontFamily="@font/quicksand_regular"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Información de la app -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ℹ️ Información"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvVersionApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versión 1.0.0"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/quicksand_regular"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnAcercaDe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💕 Acerca de 5 Minutos Conmigo"
+                android:textAllCaps="false"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/text_secondary"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Espaciado inferior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

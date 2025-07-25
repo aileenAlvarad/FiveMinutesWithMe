@@ -1,3 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Five Minutes with Me</string>
+    <!-- Nombre de la app -->
+    <string name="app_name">5 Minutos Conmigo</string>
+
+    <!-- Pantalla principal -->
+    <string name="main_title">5 Minutos Conmigo</string>
+    <string name="main_subtitle">Tu bienestar merece\n5 minutos de amor</string>
+    <string name="btn_momento_para_mi">Quiero un momento para mí</string>
+
+    <!-- Navegación -->
+    <string name="nav_diario">Diario</string>
+    <string name="nav_sonidos">Sonidos</string>
+    <string name="nav_favoritos">Favoritos</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <!-- Diario emocional -->
+    <string name="diario_title">Mi Diario Emocional</string>
+    <string name="diario_subtitle">Cada momento cuenta 🌸</string>
+    <string name="diario_pregunta">¿Cómo te sientes hoy?</string>
+    <string name="diario_hint">Cuéntame sobre tu momento...</string>
+    <string name="btn_guardar">Guardar momento</string>
+    <string name="diario_no_entradas">Aún no has registrado ningún momento\n¡Empieza tu diario emocional hoy! 💕</string>
+    <string name="diario_guardado_mensaje">Tu momento ha sido guardado con amor 💕</string>
+
+    <!-- Validaciones diario -->
+    <string name="error_texto_vacio">Por favor, escribe algo sobre tu momento 💭</string>
+    <string name="error_texto_corto">Cuéntame un poquito más... 🌸</string>
+
+    <!-- Emociones -->
+    <string name="emocion_feliz">Feliz</string>
+    <string name="emocion_tranquila">Tranquila</string>
+    <string name="emocion_triste">Triste</string>
+    <string name="emocion_ansiosa">Ansiosa</string>
+    <string name="emocion_agradecida">Agradecida</string>
+    <string name="emocion_neutral">Neutral</string>
+
+    <!-- Sonidos -->
+    <string name="sonidos_title">Sonidos Relajantes</string>
+    <string name="sonidos_subtitle">Encuentra tu paz interior 🎧</string>
+
+    <!-- Favoritos -->
+    <string name="favoritos_title">Tus Favoritos</string>
+    <string name="favoritos_subtitle">Lo que más amas 🌟</string>
+
+    <!-- Perfil -->
+    <string name="perfil_title">Tu Espacio Personal</string>
+    <string name="perfil_subtitle">Un lugar solo para ti 🌙</string>
+
+    <!-- Actividades -->
+    <string name="actividad_respiracion">Respiración Consciente</string>
+    <string name="actividad_afirmacion">Afirmación Positiva</string>
+    <string name="actividad_journaling">Mini Journaling</string>
+    <string name="actividad_sonidos">Audio Relajante</string>
+    <string name="actividad_meditacion">Visualización Guiada</string>
+
+    <!-- Mensajes -->
+    <string name="proximamente">%s estará disponible pronto 💕</string>
+    <string name="guardado_con_amor">Guardado con amor 💕</string>
+
+    <!-- Fechas -->
+    <string name="hoy">Hoy a las %s</string>
+    <string name="ayer">Ayer a las %s</string>
+    <string name="fecha_completa">%s a las %s</string>
+
+    <!-- Descriptions para accesibilidad -->
+    <string name="desc_ilustracion">Ilustración de meditación</string>
+    <string name="desc_agregar">Agregar nueva entrada</string>
+    <string name="desc_cerrar">Cerrar</string>
 </resources>

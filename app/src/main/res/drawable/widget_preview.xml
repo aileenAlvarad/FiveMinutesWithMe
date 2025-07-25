@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="200"
+    android:viewportHeight="100">
+
+    <!-- Fondo del widget -->
+    <path
+        android:fillColor="#E6B8D4"
+        android:pathData="M10,10 L190,10 Q195,10 195,15 L195,85 Q195,90 190,90 L10,90 Q5,90 5,85 L5,15 Q5,10 10,10 Z" />
+
+    <!-- Icono de la app -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,25 Q25,20 30,25 Q25,30 20,25" />
+
+    <!-- Texto del widget -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,25 L180,25 L180,30 L40,30 Z" />
+    <path
+        android:fillColor="#FFFFFF80"
+        android:pathData="M40,35 L140,35 L140,38 L40,38 Z" />
+
+    <!-- Botones -->
+    <path
+        android:fillColor="#FFFFFF30"
+        android:pathData="M20,60 L60,60 Q65,60 65,65 L65,75 Q65,80 60,80 L20,80 Q15,80 15,75 L15,65 Q15,60 20,60 Z" />
+    <path
+        android:fillColor="#FFFFFF30"
+        android:pathData="M80,60 L120,60 Q125,60 125,65 L125,75 Q125,80 120,80 L80,80 Q75,80 75,75 L75,65 Q75,60 80,60 Z" />
+    <path
+        android:fillColor="#FFFFFF30"
+        android:pathData="M140,60 L180,60 Q185,60 185,65 L185,75 Q185,80 180,80 L140,80 Q135,80 135,75 L135,65 Q135,60 140,60 Z" />
+
+</vector>
