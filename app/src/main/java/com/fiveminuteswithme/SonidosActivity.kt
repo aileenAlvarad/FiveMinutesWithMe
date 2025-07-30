@@ -3,6 +3,7 @@ package com.fiveminuteswithme
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,10 @@ class SonidosActivity : AppCompatActivity() {
     private var sonidoSeleccionado: Sonido? = null
     private var isPlaying = false
     private var tiempoSeleccionado = 5 // minutos por defecto
+
+    companion object {
+        private const val TAG = "SonidosActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +64,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🌧️",
                 descripcion = "Gotas suaves que calman el alma",
                 color = "#B0C4DE",
-                archivo = "lluvia_suave", // Raw resource
+                archivo = "audi1", // Nombre sin extensión y en minúsculas
                 categoria = SonidoCategoria.NATURALEZA
             ),
             Sonido(
@@ -68,7 +73,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🌲",
                 descripcion = "Pájaros y viento entre los árboles",
                 color = "#90EE90",
-                archivo = "bosque_sereno",
+                archivo = "audi2",
                 categoria = SonidoCategoria.NATURALEZA
             ),
             Sonido(
@@ -77,7 +82,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🌊",
                 descripcion = "El ritmo hipnótico del océano",
                 color = "#87CEEB",
-                archivo = "olas_mar",
+                archivo = "audi3",
                 categoria = SonidoCategoria.NATURALEZA
             ),
             Sonido(
@@ -86,7 +91,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🎹",
                 descripcion = "Melodías que abrazan el corazón",
                 color = "#DDA0DD",
-                archivo = "piano_dulce",
+                archivo = "audi4",
                 categoria = SonidoCategoria.MUSICAL
             ),
             Sonido(
@@ -95,7 +100,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "☕",
                 descripcion = "Ambiente acogedor para reflexionar",
                 color = "#D2B48C",
-                archivo = "cafe_lluvia",
+                archivo = "audi5",
                 categoria = SonidoCategoria.AMBIENTAL
             ),
             Sonido(
@@ -104,7 +109,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🔔",
                 descripcion = "Vibraciones que equilibran la energía",
                 color = "#FFD700",
-                archivo = "cuencos_tibetanos",
+                archivo = "audi6",
                 categoria = SonidoCategoria.MEDITACION
             ),
             Sonido(
@@ -113,7 +118,7 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🔥",
                 descripcion = "La calidez de una chimenea",
                 color = "#FF6347",
-                archivo = "fuego_crepitante",
+                archivo = "audi7",
                 categoria = SonidoCategoria.AMBIENTAL
             ),
             Sonido(
@@ -122,10 +127,25 @@ class SonidosActivity : AppCompatActivity() {
                 emoji = "🌙",
                 descripcion = "Grillos y brisa nocturna",
                 color = "#191970",
-                archivo = "noche_verano",
+                archivo = "audi8",
                 categoria = SonidoCategoria.NATURALEZA
             )
         ))
+    }
+
+    private fun reproducirSonidoAleatorio() {
+        if (sonidos.isNotEmpty()) {
+            val sonidoAleatorio = sonidos.random()
+            seleccionarSonido(sonidoAleatorio)
+
+            Toast.makeText(
+                this,
+                "Reproduciendo ${sonidoAleatorio.emoji} ${sonidoAleatorio.nombre}",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            Log.d(TAG, "Sonido aleatorio seleccionado: ${sonidoAleatorio.nombre}")
+        }
     }
 
     private fun configurarRecyclerView() {
@@ -183,47 +203,104 @@ class SonidosActivity : AppCompatActivity() {
     private fun reproducirSonido() {
         sonidoSeleccionado?.let { sonido ->
             try {
-                // En un proyecto real, cargarías el archivo desde res/raw
-                // mediaPlayer = MediaPlayer.create(this, resources.getIdentifier(sonido.archivo, "raw", packageName))
+                // Liberar MediaPlayer anterior si existe
+                mediaPlayer?.release()
 
-                // Por ahora simulamos la reproducción
-                isPlaying = true
-                fabPlayPause.setImageResource(R.drawable.ic_pause)
+                // Obtener el ID del recurso
+                val resourceId = resources.getIdentifier(sonido.archivo, "raw", packageName)
 
-                iniciarTimer()
+                if (resourceId == 0) {
+                    Log.e(TAG, "No se encontró el archivo: ${sonido.archivo}")
+                    Toast.makeText(this, "Archivo de audio no encontrado: ${sonido.archivo}", Toast.LENGTH_SHORT).show()
+                    return
+                }
 
-                Toast.makeText(
-                    this,
-                    "Reproduciendo ${sonido.nombre} por $tiempoSeleccionado minutos 🎧",
-                    Toast.LENGTH_SHORT
-                ).show()
+                // Crear y configurar MediaPlayer
+                mediaPlayer = MediaPlayer.create(this, resourceId)
+
+                mediaPlayer?.let { player ->
+                    // Configurar para loop continuo
+                    player.isLooping = true
+
+                    // Configurar listener para errores
+                    player.setOnErrorListener { _, what, extra ->
+                        Log.e(TAG, "Error en MediaPlayer: what=$what, extra=$extra")
+                        Toast.makeText(this@SonidosActivity, "Error al reproducir audio", Toast.LENGTH_SHORT).show()
+                        detenerSonido()
+                        true
+                    }
+
+                    // Configurar listener para cuando está preparado
+                    player.setOnPreparedListener {
+                        Log.d(TAG, "MediaPlayer preparado para: ${sonido.nombre}")
+                    }
+
+                    // Iniciar reproducción
+                    player.start()
+
+                    isPlaying = true
+                    fabPlayPause.setImageResource(R.drawable.ic_pause)
+
+                    // Iniciar timer
+                    iniciarTimer()
+
+                    Toast.makeText(
+                        this,
+                        "Reproduciendo ${sonido.nombre} por $tiempoSeleccionado minutos 🎧",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    Log.d(TAG, "Reproduciendo: ${sonido.nombre}")
+
+                } ?: run {
+                    Log.e(TAG, "No se pudo crear MediaPlayer")
+                    Toast.makeText(this, "Error al crear reproductor", Toast.LENGTH_SHORT).show()
+                }
 
             } catch (e: Exception) {
-                Toast.makeText(this, "Error al reproducir sonido", Toast.LENGTH_SHORT).show()
+                Log.e(TAG, "Error al reproducir sonido", e)
+                Toast.makeText(this, "Error al reproducir sonido: ${e.message}", Toast.LENGTH_SHORT).show()
+                detenerSonido()
             }
         }
     }
 
     private fun pausarSonido() {
-        mediaPlayer?.pause()
-        timer?.cancel()
+        try {
+            mediaPlayer?.let { player ->
+                if (player.isPlaying) {
+                    player.pause()
+                    Log.d(TAG, "Audio pausado")
+                }
+            }
 
-        isPlaying = false
-        fabPlayPause.setImageResource(R.drawable.ic_play)
+            timer?.cancel()
+            isPlaying = false
+            fabPlayPause.setImageResource(R.drawable.ic_play)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "Error al pausar sonido", e)
+        }
     }
 
     private fun detenerSonido() {
-        mediaPlayer?.apply {
-            if (isPlaying) {
-                stop()
+        try {
+            mediaPlayer?.let { player ->
+                if (player.isPlaying) {
+                    player.stop()
+                }
+                player.release()
+                Log.d(TAG, "MediaPlayer liberado")
             }
-            release()
-        }
-        mediaPlayer = null
+            mediaPlayer = null
 
-        timer?.cancel()
-        isPlaying = false
-        fabPlayPause.setImageResource(R.drawable.ic_play)
+            timer?.cancel()
+            isPlaying = false
+            fabPlayPause.setImageResource(R.drawable.ic_play)
+
+        } catch (e: Exception) {
+            Log.e(TAG, "Error al detener sonido", e)
+        }
     }
 
     private fun iniciarTimer() {
@@ -247,8 +324,12 @@ class SonidosActivity : AppCompatActivity() {
                     "Tu momento de paz ha terminado 🌸",
                     Toast.LENGTH_LONG
                 ).show()
+
+                Log.d(TAG, "Timer terminado")
             }
         }.start()
+
+        Log.d(TAG, "Timer iniciado por $tiempoSeleccionado minutos")
     }
 
     private fun actualizarTextoTiempo() {
@@ -263,14 +344,17 @@ class SonidosActivity : AppCompatActivity() {
 
         if (favoritos.contains(sonido.id.toString())) {
             favoritos.remove(sonido.id.toString())
+            sonido.esFavorito = false
             Toast.makeText(this, "Removido de favoritos", Toast.LENGTH_SHORT).show()
         } else {
             favoritos.add(sonido.id.toString())
+            sonido.esFavorito = true
             Toast.makeText(this, "Agregado a favoritos 💕", Toast.LENGTH_SHORT).show()
         }
 
         sharedPref.edit().putStringSet("favoritos", favoritos).apply()
         actualizarBotonFavorito()
+        sonidosAdapter.notifyDataSetChanged()
     }
 
     private fun actualizarBotonFavorito() {
@@ -301,12 +385,19 @@ class SonidosActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        Log.d(TAG, "Activity destruida")
         detenerSonido()
     }
 
     override fun onPause() {
         super.onPause()
         // Opcional: pausar cuando la app va a background
+        Log.d(TAG, "Activity pausada")
         // pausarSonido()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "Activity resumida")
     }
 }

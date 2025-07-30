@@ -31,7 +31,7 @@ enum class TipoActividad(
         emoji = "📝"
     ),
 
-    SONIDOS(
+    SONIDOS1(
         titulo = "Pausa Sonora",
         descripcion = "Deja que los sonidos relajantes te envuelvan",
         instrucciones = "Elige un sonido que resuene contigo hoy. Cierra los ojos y permítete ser llevada por la experiencia auditiva.",

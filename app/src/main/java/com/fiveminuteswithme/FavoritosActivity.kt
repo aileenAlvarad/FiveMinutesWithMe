@@ -95,14 +95,14 @@ class FavoritosActivity : AppCompatActivity() {
 
         // Crear lista completa de sonidos (igual que en SonidosActivity)
         val todosSonidos = listOf(
-            Sonido(1, "Lluvia Suave", "🌧️", "Gotas suaves que calman el alma", "#B0C4DE", "lluvia_suave", SonidoCategoria.NATURALEZA),
-            Sonido(2, "Bosque Sereno", "🌲", "Pájaros y viento entre los árboles", "#90EE90", "bosque_sereno", SonidoCategoria.NATURALEZA),
-            Sonido(3, "Olas del Mar", "🌊", "El ritmo hipnótico del océano", "#87CEEB", "olas_mar", SonidoCategoria.NATURALEZA),
-            Sonido(4, "Piano Dulce", "🎹", "Melodías que abrazan el corazón", "#DDA0DD", "piano_dulce", SonidoCategoria.MUSICAL),
-            Sonido(5, "Café y Lluvia", "☕", "Ambiente acogedor para reflexionar", "#D2B48C", "cafe_lluvia", SonidoCategoria.AMBIENTAL),
-            Sonido(6, "Cuencos Tibetanos", "🔔", "Vibraciones que equilibran la energía", "#FFD700", "cuencos_tibetanos", SonidoCategoria.MEDITACION),
-            Sonido(7, "Fuego Crepitante", "🔥", "La calidez de una chimenea", "#FF6347", "fuego_crepitante", SonidoCategoria.AMBIENTAL),
-            Sonido(8, "Noche de Verano", "🌙", "Grillos y brisa nocturna", "#191970", "noche_verano", SonidoCategoria.NATURALEZA)
+            Sonido(1, "Lluvia Suave", "🌧️", "Gotas suaves que calman el alma", "#B0C4DE", "audi1", SonidoCategoria.NATURALEZA),
+            Sonido(2, "Bosque Sereno", "🌲", "Pájaros y viento entre los árboles", "#90EE90", "audi2", SonidoCategoria.NATURALEZA),
+            Sonido(3, "Olas del Mar", "🌊", "El ritmo hipnótico del océano", "#87CEEB", "audi3", SonidoCategoria.NATURALEZA),
+            Sonido(4, "Piano Dulce", "🎹", "Melodías que abrazan el corazón", "#DDA0DD", "audi4", SonidoCategoria.MUSICAL),
+            Sonido(5, "Café y Lluvia", "☕", "Ambiente acogedor para reflexionar", "#D2B48C", "audi5", SonidoCategoria.AMBIENTAL),
+            Sonido(6, "Cuencos Tibetanos", "🔔", "Vibraciones que equilibran la energía", "#FFD700", "audi6", SonidoCategoria.MEDITACION),
+            Sonido(7, "Fuego Crepitante", "🔥", "La calidez de una chimenea", "#FF6347", "audi7", SonidoCategoria.AMBIENTAL),
+            Sonido(8, "Noche de Verano", "🌙", "Grillos y brisa nocturna", "#191970", "audi8", SonidoCategoria.NATURALEZA)
         )
 
         sonidosFavoritos.clear()
