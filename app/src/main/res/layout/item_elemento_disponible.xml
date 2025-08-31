@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardElementoDisponible"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/tvContenidoDisponible"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="🌸"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/tvDescripcionDisponible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flor de cerezo"
+            android:textSize="8sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/quicksand_regular"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:alpha="0.8" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

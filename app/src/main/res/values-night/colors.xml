@@ -6,6 +6,9 @@
     <color name="secondary_dark">#F4E6A1</color>
     <color name="accent_dark">#FFCCD5</color>
 
+    <color name="accent_pink">#FFC1CC</color> <!-- Puedes cambiar el color si quieres otro tono -->
+
+
     <!-- Fondo y superficies oscuras -->
     <color name="background_dark">#121212</color>
     <color name="surface_dark">#1E1E1E</color>
@@ -17,7 +20,7 @@
     <color name="text_on_primary_dark">#1A1A1A</color>
     <color name="text_hint_dark">#757575</color>
 
-    <!-- Colores de emociones para tema oscuro (más suaves) -->
+    <!-- Colores de emociones para tema oscuro (mï¿½s suaves) -->
     <color name="emocion_feliz_dark">#FFCCD5</color>
     <color name="emocion_tranquila_dark">#D6D6FA</color>
     <color name="emocion_triste_dark">#9BB7D4</color>
